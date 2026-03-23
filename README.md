@@ -174,186 +174,270 @@ Data in JSON
 
 ```
 {
-  "physical_pillar_analysis": [
+  "physical_readiness_report": [
     {
       "player_id": "824001",
-      "metrics": [
-        { "metric": "Current Distance", "value": "4.2 km", "status": "Low" },
-        { "metric": "High-Speed Running (HSR)", "value": "12 m", "status": "Low" },
-        { "metric": "Sprint distance", "value": "0 m", "status": "N/A" },
-        { "metric": "Accelerations", "value": 12, "status": "Optimal" },
-        { "metric": "Decelerations", "value": 15, "status": "Optimal" },
-        { "metric": "Player Load", "value": 185, "status": "Low" },
-        { "metric": "Metabolic Power", "value": 2.1, "status": "Low" }
-      ]
+      "physical_pillar": {
+        "current_distance_km": 4.2,
+        "high_speed_running_m": 12,
+        "sprint_distance_m": 0,
+        "accelerations": 12,
+        "decelerations": 15,
+        "player_load": 185,
+        "metabolic_power": 2.1
+      }
     },
     {
       "player_id": "824002",
-      "metrics": [
-        { "metric": "Current Distance", "value": "10.8 km", "status": "High" },
-        { "metric": "High-Speed Running (HSR)", "value": "840 m", "status": "High" },
-        { "metric": "Sprint distance", "value": "310 m", "status": "High" },
-        { "metric": "Accelerations", "value": 45, "status": "Elevated" },
-        { "metric": "Decelerations", "value": 52, "status": "Elevated" },
-        { "metric": "Player Load", "value": 840, "status": "High" },
-        { "metric": "Metabolic Power", "value": 10.5, "status": "High" }
-      ]
+      "physical_pillar": {
+        "current_distance_km": 10.8,
+        "high_speed_running_m": 840,
+        "sprint_distance_m": 310,
+        "accelerations": 45,
+        "decelerations": 52,
+        "player_load": 840,
+        "metabolic_power": 10.5
+      }
     },
     {
       "player_id": "824003",
-      "metrics": [
-        { "metric": "Current Distance", "value": "9.5 km", "status": "Moderate" },
-        { "metric": "High-Speed Running (HSR)", "value": "320 m", "status": "Moderate" },
-        { "metric": "Sprint distance", "value": "120 m", "status": "Moderate" },
-        { "metric": "Accelerations", "value": 22, "status": "Moderate" },
-        { "metric": "Decelerations", "value": 31, "status": "Moderate" },
-        { "metric": "Player Load", "value": 690, "status": "Moderate" },
-        { "metric": "Metabolic Power", "value": 8.8, "status": "Moderate" }
-      ]
+      "physical_pillar": {
+        "current_distance_km": 9.5,
+        "high_speed_running_m": 320,
+        "sprint_distance_m": 120,
+        "accelerations": 22,
+        "decelerations": 31,
+        "player_load": 690,
+        "metabolic_power": 8.8
+      }
     },
     {
       "player_id": "824004",
-      "metrics": [
-        { "metric": "Current Distance", "value": "9.7 km", "status": "Moderate" },
-        { "metric": "High-Speed Running (HSR)", "value": "290 m", "status": "Moderate" },
-        { "metric": "Sprint distance", "value": "115 m", "status": "Moderate" },
-        { "metric": "Accelerations", "value": 25, "status": "Moderate" },
-        { "metric": "Decelerations", "value": 28, "status": "Moderate" },
-        { "metric": "Player Load", "value": 710, "status": "Moderate" },
-        { "metric": "Metabolic Power", "value": 8.9, "status": "Moderate" }
-      ]
+      "physical_pillar": {
+        "current_distance_km": 9.7,
+        "high_speed_running_m": 290,
+        "sprint_distance_m": 115,
+        "accelerations": 25,
+        "decelerations": 28,
+        "player_load": 710,
+        "metabolic_power": 8.9
+      }
     },
     {
       "player_id": "824005",
-      "metrics": [
-        { "metric": "Current Distance", "value": "9.1 km", "status": "Moderate" },
-        { "metric": "High-Speed Running (HSR)", "value": "790 m", "status": "High" },
-        { "metric": "Sprint distance", "value": "285 m", "status": "High" },
-        { "metric": "Accelerations", "value": 38, "status": "Elevated" },
-        { "metric": "Decelerations", "value": 41, "status": "Elevated" },
-        { "metric": "Player Load", "value": 780, "status": "High" },
-        { "metric": "Metabolic Power", "value": 10.1, "status": "High" }
-      ]
+      "physical_pillar": {
+        "current_distance_km": 9.1,
+        "high_speed_running_m": 790,
+        "sprint_distance_m": 285,
+        "accelerations": 38,
+        "decelerations": 41,
+        "player_load": 780,
+        "metabolic_power": 10.1
+      }
     },
     {
       "player_id": "824006",
-      "metrics": [
-        { "metric": "Current Distance", "value": "11.9 km", "status": "Very High" },
-        { "metric": "High-Speed Running (HSR)", "value": "610 m", "status": "Moderate" },
-        { "metric": "Sprint distance", "value": "90 m", "status": "Low" },
-        { "metric": "Accelerations", "value": 58, "status": "Very High" },
-        { "metric": "Decelerations", "value": 65, "status": "Very High" },
-        { "metric": "Player Load", "value": 910, "status": "Very High" },
-        { "metric": "Metabolic Power", "value": 11.2, "status": "Very High" }
-      ]
+      "physical_pillar": {
+        "current_distance_km": 11.9,
+        "high_speed_running_m": 610,
+        "sprint_distance_m": 90,
+        "accelerations": 58,
+        "decelerations": 65,
+        "player_load": 910,
+        "metabolic_power": 11.2
+      }
     },
     {
       "player_id": "824007",
-      "metrics": [
-        { "metric": "Current Distance", "value": "12.4 km", "status": "Critical" },
-        { "metric": "High-Speed Running (HSR)", "value": "920 m", "status": "Very High" },
-        { "metric": "Sprint distance", "value": "180 m", "status": "Moderate" },
-        { "metric": "Accelerations", "value": 62, "status": "Critical" },
-        { "metric": "Decelerations", "value": 74, "status": "Critical" },
-        { "metric": "Player Load", "value": 985, "status": "Critical" },
-        { "metric": "Metabolic Power", "value": 12.0, "status": "Critical" }
-      ]
+      "physical_pillar": {
+        "current_distance_km": 12.4,
+        "high_speed_running_m": 920,
+        "sprint_distance_m": 180,
+        "accelerations": 62,
+        "decelerations": 74,
+        "player_load": 985,
+        "metabolic_power": 12.0
+      }
     },
     {
       "player_id": "824008",
-      "metrics": [
-        { "metric": "Current Distance", "value": "11.1 km", "status": "High" },
-        { "metric": "High-Speed Running (HSR)", "value": "880 m", "status": "Very High" },
-        { "metric": "Sprint distance", "value": "195 m", "status": "Moderate" },
-        { "metric": "Accelerations", "value": 55, "status": "Very High" },
-        { "metric": "Decelerations", "value": 68, "status": "Very High" },
-        { "metric": "Player Load", "value": 890, "status": "High" },
-        { "metric": "Metabolic Power", "value": 11.5, "status": "Very High" }
-      ]
+      "physical_pillar": {
+        "current_distance_km": 11.1,
+        "high_speed_running_m": 880,
+        "sprint_distance_m": 195,
+        "accelerations": 55,
+        "decelerations": 68,
+        "player_load": 890,
+        "metabolic_power": 11.5
+      }
     },
     {
       "player_id": "824009",
-      "metrics": [
-        { "metric": "Current Distance", "value": "10.2 km", "status": "Moderate" },
-        { "metric": "High-Speed Running (HSR)", "value": "1050 m", "status": "Critical" },
-        { "metric": "Sprint distance", "value": "410 m", "status": "Critical" },
-        { "metric": "Accelerations", "value": 51, "status": "High" },
-        { "metric": "Decelerations", "value": 48, "status": "High" },
-        { "metric": "Player Load", "value": 920, "status": "High" },
-        { "metric": "Metabolic Power", "value": 11.8, "status": "Very High" }
-      ]
+      "physical_pillar": {
+        "current_distance_km": 10.2,
+        "high_speed_running_m": 1050,
+        "sprint_distance_m": 410,
+        "accelerations": 51,
+        "decelerations": 48,
+        "player_load": 920,
+        "metabolic_power": 11.8
+      }
     },
     {
       "player_id": "824010",
-      "metrics": [
-        { "metric": "Current Distance", "value": "10.5 km", "status": "Moderate" },
-        { "metric": "High-Speed Running (HSR)", "value": "810 m", "status": "High" },
-        { "metric": "Sprint distance", "value": "380 m", "status": "High" },
-        { "metric": "Accelerations", "value": 48, "status": "High" },
-        { "metric": "Decelerations", "value": 42, "status": "Moderate" },
-        { "metric": "Player Load", "value": 850, "status": "High" },
-        { "metric": "Metabolic Power", "value": 11.0, "status": "High" }
-      ]
+      "physical_pillar": {
+        "current_distance_km": 10.5,
+        "high_speed_running_m": 810,
+        "sprint_distance_m": 380,
+        "accelerations": 48,
+        "decelerations": 42,
+        "player_load": 850,
+        "metabolic_power": 11.0
+      }
     },
     {
       "player_id": "824011",
-      "metrics": [
-        { "metric": "Current Distance", "value": "7.8 km", "status": "Low-Moderate" },
-        { "metric": "High-Speed Running (HSR)", "value": "910 m", "status": "Very High" },
-        { "metric": "Sprint distance", "value": "340 m", "status": "High" },
-        { "metric": "Accelerations", "value": 35, "status": "Moderate" },
-        { "metric": "Decelerations", "value": 38, "status": "Moderate" },
-        { "metric": "Player Load", "value": 720, "status": "Moderate" },
-        { "metric": "Metabolic Power", "value": 10.4, "status": "High" }
-      ]
+      "physical_pillar": {
+        "current_distance_km": 7.8,
+        "high_speed_running_m": 910,
+        "sprint_distance_m": 340,
+        "accelerations": 35,
+        "decelerations": 38,
+        "player_load": 720,
+        "metabolic_power": 10.4
+      }
     },
     {
       "player_id": "824012",
-      "metrics": [
-        { "metric": "Current Distance", "value": "3.2 km", "status": "Low" },
-        { "metric": "High-Speed Running (HSR)", "value": "280 m", "status": "Low" },
-        { "metric": "Sprint distance", "value": "95 m", "status": "Low" },
-        { "metric": "Accelerations", "value": 18, "status": "Low" },
-        { "metric": "Decelerations", "value": 22, "status": "Low" },
-        { "metric": "Player Load", "value": 240, "status": "Low" },
-        { "metric": "Metabolic Power", "value": 9.2, "status": "Moderate" }
-      ]
+      "physical_pillar": {
+        "current_distance_km": 3.2,
+        "high_speed_running_m": 280,
+        "sprint_distance_m": 95,
+        "accelerations": 18,
+        "decelerations": 22,
+        "player_load": 240,
+        "metabolic_power": 9.2
+      }
     },
     {
       "player_id": "824013",
-      "metrics": [
-        { "metric": "Current Distance", "value": "2.1 km", "status": "Very Low" },
-        { "metric": "High-Speed Running (HSR)", "value": "190 m", "status": "Low" },
-        { "metric": "Sprint distance", "value": "60 m", "status": "Low" },
-        { "metric": "Accelerations", "value": 12, "status": "Low" },
-        { "metric": "Decelerations", "value": 14, "status": "Low" },
-        { "metric": "Player Load", "value": 160, "status": "Very Low" },
-        { "metric": "Metabolic Power", "value": 8.5, "status": "Moderate" }
-      ]
+      "physical_pillar": {
+        "current_distance_km": 2.1,
+        "high_speed_running_m": 190,
+        "sprint_distance_m": 60,
+        "accelerations": 12,
+        "decelerations": 14,
+        "player_load": 160,
+        "metabolic_power": 8.5
+      }
     },
     {
       "player_id": "824014",
-      "metrics": [
-        { "metric": "Current Distance", "value": "1.2 km", "status": "Minimal" },
-        { "metric": "High-Speed Running (HSR)", "value": "85 m", "status": "Minimal" },
-        { "metric": "Sprint distance", "value": "30 m", "status": "Minimal" },
-        { "metric": "Accelerations", "value": 8, "status": "Minimal" },
-        { "metric": "Decelerations", "value": 10, "status": "Minimal" },
-        { "metric": "Player Load", "value": 95, "status": "Minimal" },
-        { "metric": "Metabolic Power", "value": 8.1, "status": "Low" }
-      ]
+      "physical_pillar": {
+        "current_distance_km": 1.2,
+        "high_speed_running_m": 85,
+        "sprint_distance_m": 30,
+        "accelerations": 8,
+        "decelerations": 10,
+        "player_load": 95,
+        "metabolic_power": 8.1
+      }
     },
     {
       "player_id": "824015",
-      "metrics": [
-        { "metric": "Current Distance", "value": "0 km", "status": "No Load" },
-        { "metric": "High-Speed Running (HSR)", "value": "0 m", "status": "No Load" },
-        { "metric": "Sprint distance", "value": "0 m", "status": "No Load" },
-        { "metric": "Accelerations", "value": 0, "status": "No Load" },
-        { "metric": "Decelerations", "value": 0, "status": "No Load" },
-        { "metric": "Player Load", "value": 0, "status": "No Load" },
-        { "metric": "Metabolic Power", "value": 0, "status": "No Load" }
-      ]
+      "physical_pillar": {
+        "current_distance_km": 0,
+        "high_speed_running_m": 0,
+        "sprint_distance_m": 0,
+        "accelerations": 0,
+        "decelerations": 0,
+        "player_load": 0,
+        "metabolic_power": 0
+      }
+    },
+    {
+      "player_id": "824016",
+      "physical_pillar": {
+        "current_distance_km": 0,
+        "high_speed_running_m": 0,
+        "sprint_distance_m": 0,
+        "accelerations": 0,
+        "decelerations": 0,
+        "player_load": 0,
+        "metabolic_power": 0
+      }
+    },
+    {
+      "player_id": "824017",
+      "physical_pillar": {
+        "current_distance_km": 0,
+        "high_speed_running_m": 0,
+        "sprint_distance_m": 0,
+        "accelerations": 0,
+        "decelerations": 0,
+        "player_load": 0,
+        "metabolic_power": 0
+      }
+    },
+    {
+      "player_id": "824018",
+      "physical_pillar": {
+        "current_distance_km": 0,
+        "high_speed_running_m": 0,
+        "sprint_distance_m": 0,
+        "accelerations": 0,
+        "decelerations": 0,
+        "player_load": 0,
+        "metabolic_power": 0
+      }
+    },
+    {
+      "player_id": "824019",
+      "physical_pillar": {
+        "current_distance_km": 0,
+        "high_speed_running_m": 0,
+        "sprint_distance_m": 0,
+        "accelerations": 0,
+        "decelerations": 0,
+        "player_load": 0,
+        "metabolic_power": 0
+      }
+    },
+    {
+      "player_id": "824020",
+      "physical_pillar": {
+        "current_distance_km": 0,
+        "high_speed_running_m": 0,
+        "sprint_distance_m": 0,
+        "accelerations": 0,
+        "decelerations": 0,
+        "player_load": 0,
+        "metabolic_power": 0
+      }
+    },
+    {
+      "player_id": "824021",
+      "physical_pillar": {
+        "current_distance_km": 0,
+        "high_speed_running_m": 0,
+        "sprint_distance_m": 0,
+        "accelerations": 0,
+        "decelerations": 0,
+        "player_load": 0,
+        "metabolic_power": 0
+      }
+    },
+    {
+      "player_id": "824022",
+      "physical_pillar": {
+        "current_distance_km": 0,
+        "high_speed_running_m": 0,
+        "sprint_distance_m": 0,
+        "accelerations": 0,
+        "decelerations": 0,
+        "player_load": 0,
+        "metabolic_power": 0
+      }
     }
   ]
 }
