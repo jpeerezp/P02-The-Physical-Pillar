@@ -17,7 +17,7 @@
 ```
 Role: You are a Lead Sports Scientist and S&C Consultant for an elite European football club.
 
-Action: Distribute the "Physical Pillar" (every input) for Player ID [player_id] in a  "Physical Readiness" table that shows all the data for each [player_id] . 
+Action: Distribute the "Physical Pillar" (every input) for Player ID [player_id] in a  "Physical Readiness" table that shows all the data for each [player_id] . Return in JSON format.
 
 Context: We are preparing matchday 2. The data is collected from matchday 1 and post-game week 1. The table must include all the analyzed data to be shown next to a "Digital twin" model of each [player_id].
 
@@ -84,9 +84,9 @@ This prompt generates the individualized physical data cards required for the "D
 
 **Trigger:** Introduction of Matchday 1 GPS data exports.
 
-**Actor:** Sports Science Department.
+**Actor:** Athletic Trainer, Fitness Coach, and Sports Science Department.
 
-**Timing:** Post-match MD+1 analysis.
+**Timing:** Post MatchDay analysis.
 
 **Next step:** P03 (Tactical Pillar) introduction.
 
@@ -152,7 +152,7 @@ By the time a manual spreadsheet is updated, the morning tactical briefing may h
 ```
 Role: You are a Lead Sports Scientist and S&C Consultant for an elite European football club.
 
-Action: Distribute the "Physical Pillar" (every input) for Player ID [player_id] in a  "Physical Readiness" table (Metric | Value | Status) for each [player_id].
+Action: Distribute the "Physical Pillar" (every input) for Player ID [player_id] in a  "Physical Readiness" table (Metric | Value | Status) for each [player_id]. Return in JSON format.
 
 Context: We are preparing matchday 2. The data is collected from matchday 1 and post-game week 1. The table must include all the analyzed data to be shown next to a "Digital twin" model of each [player_id]. Inputs: - Current Distance: [dist_km] km - High-Speed Running (HSR): [hsr_m] m - Sprint distance: [player_load] - Accelerations: [accel] - Decelerations: [decel] - Player Load: [player_load] - Metabolic Power: [met_power]
 
@@ -171,6 +171,195 @@ Data in JSON
 
 **Change:** Added the constraint: `Create ONE table per each [player_id], not per player position.` Refined the input mapping to ensure unique data cards.
 
+**Output:** 
+
+```
+{
+  "physical_pillar_analysis": [
+    {
+      "player_id": "824001",
+      "metrics": [
+        { "metric": "Current Distance", "value": "4.2 km", "status": "Low" },
+        { "metric": "High-Speed Running (HSR)", "value": "12 m", "status": "Low" },
+        { "metric": "Sprint distance", "value": "0 m", "status": "N/A" },
+        { "metric": "Accelerations", "value": 12, "status": "Optimal" },
+        { "metric": "Decelerations", "value": 15, "status": "Optimal" },
+        { "metric": "Player Load", "value": 185, "status": "Low" },
+        { "metric": "Metabolic Power", "value": 2.1, "status": "Low" }
+      ]
+    },
+    {
+      "player_id": "824002",
+      "metrics": [
+        { "metric": "Current Distance", "value": "10.8 km", "status": "High" },
+        { "metric": "High-Speed Running (HSR)", "value": "840 m", "status": "High" },
+        { "metric": "Sprint distance", "value": "310 m", "status": "High" },
+        { "metric": "Accelerations", "value": 45, "status": "Elevated" },
+        { "metric": "Decelerations", "value": 52, "status": "Elevated" },
+        { "metric": "Player Load", "value": 840, "status": "High" },
+        { "metric": "Metabolic Power", "value": 10.5, "status": "High" }
+      ]
+    },
+    {
+      "player_id": "824003",
+      "metrics": [
+        { "metric": "Current Distance", "value": "9.5 km", "status": "Moderate" },
+        { "metric": "High-Speed Running (HSR)", "value": "320 m", "status": "Moderate" },
+        { "metric": "Sprint distance", "value": "120 m", "status": "Moderate" },
+        { "metric": "Accelerations", "value": 22, "status": "Moderate" },
+        { "metric": "Decelerations", "value": 31, "status": "Moderate" },
+        { "metric": "Player Load", "value": 690, "status": "Moderate" },
+        { "metric": "Metabolic Power", "value": 8.8, "status": "Moderate" }
+      ]
+    },
+    {
+      "player_id": "824004",
+      "metrics": [
+        { "metric": "Current Distance", "value": "9.7 km", "status": "Moderate" },
+        { "metric": "High-Speed Running (HSR)", "value": "290 m", "status": "Moderate" },
+        { "metric": "Sprint distance", "value": "115 m", "status": "Moderate" },
+        { "metric": "Accelerations", "value": 25, "status": "Moderate" },
+        { "metric": "Decelerations", "value": 28, "status": "Moderate" },
+        { "metric": "Player Load", "value": 710, "status": "Moderate" },
+        { "metric": "Metabolic Power", "value": 8.9, "status": "Moderate" }
+      ]
+    },
+    {
+      "player_id": "824005",
+      "metrics": [
+        { "metric": "Current Distance", "value": "9.1 km", "status": "Moderate" },
+        { "metric": "High-Speed Running (HSR)", "value": "790 m", "status": "High" },
+        { "metric": "Sprint distance", "value": "285 m", "status": "High" },
+        { "metric": "Accelerations", "value": 38, "status": "Elevated" },
+        { "metric": "Decelerations", "value": 41, "status": "Elevated" },
+        { "metric": "Player Load", "value": 780, "status": "High" },
+        { "metric": "Metabolic Power", "value": 10.1, "status": "High" }
+      ]
+    },
+    {
+      "player_id": "824006",
+      "metrics": [
+        { "metric": "Current Distance", "value": "11.9 km", "status": "Very High" },
+        { "metric": "High-Speed Running (HSR)", "value": "610 m", "status": "Moderate" },
+        { "metric": "Sprint distance", "value": "90 m", "status": "Low" },
+        { "metric": "Accelerations", "value": 58, "status": "Very High" },
+        { "metric": "Decelerations", "value": 65, "status": "Very High" },
+        { "metric": "Player Load", "value": 910, "status": "Very High" },
+        { "metric": "Metabolic Power", "value": 11.2, "status": "Very High" }
+      ]
+    },
+    {
+      "player_id": "824007",
+      "metrics": [
+        { "metric": "Current Distance", "value": "12.4 km", "status": "Critical" },
+        { "metric": "High-Speed Running (HSR)", "value": "920 m", "status": "Very High" },
+        { "metric": "Sprint distance", "value": "180 m", "status": "Moderate" },
+        { "metric": "Accelerations", "value": 62, "status": "Critical" },
+        { "metric": "Decelerations", "value": 74, "status": "Critical" },
+        { "metric": "Player Load", "value": 985, "status": "Critical" },
+        { "metric": "Metabolic Power", "value": 12.0, "status": "Critical" }
+      ]
+    },
+    {
+      "player_id": "824008",
+      "metrics": [
+        { "metric": "Current Distance", "value": "11.1 km", "status": "High" },
+        { "metric": "High-Speed Running (HSR)", "value": "880 m", "status": "Very High" },
+        { "metric": "Sprint distance", "value": "195 m", "status": "Moderate" },
+        { "metric": "Accelerations", "value": 55, "status": "Very High" },
+        { "metric": "Decelerations", "value": 68, "status": "Very High" },
+        { "metric": "Player Load", "value": 890, "status": "High" },
+        { "metric": "Metabolic Power", "value": 11.5, "status": "Very High" }
+      ]
+    },
+    {
+      "player_id": "824009",
+      "metrics": [
+        { "metric": "Current Distance", "value": "10.2 km", "status": "Moderate" },
+        { "metric": "High-Speed Running (HSR)", "value": "1050 m", "status": "Critical" },
+        { "metric": "Sprint distance", "value": "410 m", "status": "Critical" },
+        { "metric": "Accelerations", "value": 51, "status": "High" },
+        { "metric": "Decelerations", "value": 48, "status": "High" },
+        { "metric": "Player Load", "value": 920, "status": "High" },
+        { "metric": "Metabolic Power", "value": 11.8, "status": "Very High" }
+      ]
+    },
+    {
+      "player_id": "824010",
+      "metrics": [
+        { "metric": "Current Distance", "value": "10.5 km", "status": "Moderate" },
+        { "metric": "High-Speed Running (HSR)", "value": "810 m", "status": "High" },
+        { "metric": "Sprint distance", "value": "380 m", "status": "High" },
+        { "metric": "Accelerations", "value": 48, "status": "High" },
+        { "metric": "Decelerations", "value": 42, "status": "Moderate" },
+        { "metric": "Player Load", "value": 850, "status": "High" },
+        { "metric": "Metabolic Power", "value": 11.0, "status": "High" }
+      ]
+    },
+    {
+      "player_id": "824011",
+      "metrics": [
+        { "metric": "Current Distance", "value": "7.8 km", "status": "Low-Moderate" },
+        { "metric": "High-Speed Running (HSR)", "value": "910 m", "status": "Very High" },
+        { "metric": "Sprint distance", "value": "340 m", "status": "High" },
+        { "metric": "Accelerations", "value": 35, "status": "Moderate" },
+        { "metric": "Decelerations", "value": 38, "status": "Moderate" },
+        { "metric": "Player Load", "value": 720, "status": "Moderate" },
+        { "metric": "Metabolic Power", "value": 10.4, "status": "High" }
+      ]
+    },
+    {
+      "player_id": "824012",
+      "metrics": [
+        { "metric": "Current Distance", "value": "3.2 km", "status": "Low" },
+        { "metric": "High-Speed Running (HSR)", "value": "280 m", "status": "Low" },
+        { "metric": "Sprint distance", "value": "95 m", "status": "Low" },
+        { "metric": "Accelerations", "value": 18, "status": "Low" },
+        { "metric": "Decelerations", "value": 22, "status": "Low" },
+        { "metric": "Player Load", "value": 240, "status": "Low" },
+        { "metric": "Metabolic Power", "value": 9.2, "status": "Moderate" }
+      ]
+    },
+    {
+      "player_id": "824013",
+      "metrics": [
+        { "metric": "Current Distance", "value": "2.1 km", "status": "Very Low" },
+        { "metric": "High-Speed Running (HSR)", "value": "190 m", "status": "Low" },
+        { "metric": "Sprint distance", "value": "60 m", "status": "Low" },
+        { "metric": "Accelerations", "value": 12, "status": "Low" },
+        { "metric": "Decelerations", "value": 14, "status": "Low" },
+        { "metric": "Player Load", "value": 160, "status": "Very Low" },
+        { "metric": "Metabolic Power", "value": 8.5, "status": "Moderate" }
+      ]
+    },
+    {
+      "player_id": "824014",
+      "metrics": [
+        { "metric": "Current Distance", "value": "1.2 km", "status": "Minimal" },
+        { "metric": "High-Speed Running (HSR)", "value": "85 m", "status": "Minimal" },
+        { "metric": "Sprint distance", "value": "30 m", "status": "Minimal" },
+        { "metric": "Accelerations", "value": 8, "status": "Minimal" },
+        { "metric": "Decelerations", "value": 10, "status": "Minimal" },
+        { "metric": "Player Load", "value": 95, "status": "Minimal" },
+        { "metric": "Metabolic Power", "value": 8.1, "status": "Low" }
+      ]
+    },
+    {
+      "player_id": "824015",
+      "metrics": [
+        { "metric": "Current Distance", "value": "0 km", "status": "No Load" },
+        { "metric": "High-Speed Running (HSR)", "value": "0 m", "status": "No Load" },
+        { "metric": "Sprint distance", "value": "0 m", "status": "No Load" },
+        { "metric": "Accelerations", "value": 0, "status": "No Load" },
+        { "metric": "Decelerations", "value": 0, "status": "No Load" },
+        { "metric": "Player Load", "value": 0, "status": "No Load" },
+        { "metric": "Metabolic Power", "value": 0, "status": "No Load" }
+      ]
+    }
+  ]
+}
+```
+
 **Result:** Produced distinct, modular tables for each unique ID that can be instantly overlaid onto the P01 visual shell.
 
 **Observed effect:** Eliminated the "Squad Report" format in favor of "Individual Data Profiles," allowing for 1:1 mapping with the JSON schema.
@@ -179,7 +368,7 @@ Data in JSON
 
 ---
 
-## 📊 A/B Evaluation: Output A vs. Output B
+## 📊 A/B Test Results
 
 | Criteria | Output A (Typical LLM) | Output B (Structured) |
 | :--- | :---: | :---: |
