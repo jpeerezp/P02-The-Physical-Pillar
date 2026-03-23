@@ -173,7 +173,7 @@ Data in JSON
 
 **Result:** Produced distinct, modular tables for each unique ID that can be instantly overlaid onto the P01 visual shell.
 
-**Observed effect:** Eliminated the "Squad Report" format in favor of "Individual Data Profiles," allowing for 1:1 mapping with the `la_liga_squad_week_1` JSON schema.
+**Observed effect:** Eliminated the "Squad Report" format in favor of "Individual Data Profiles," allowing for 1:1 mapping with the JSON schema.
 
 **Lesson learned:** Explicitly forbidding "grouping" and forcing a 1:1 ID-to-Table ratio is essential for building a scalable, automated Digital Twin library.
 
@@ -190,4 +190,10 @@ Data in JSON
 | Data structuring accuracy | `2.2 / 5` | `4.8 / 5` |
 | Send-ready without edit | `1.5 / 5` | `4.6 / 5` |
 | **Overall** | **`2.4 / 5`** | **`4.8 / 5`** |
-- **Also uses:** P03 — Technical & Tactical Pillars (Correlates performance drops with physical fatigue)
+
+---
+
+## 🔗 Related Prompts
+
+- **Next in chain:** P03 — Technical & Tactical Pillars (Injects technical and tactical data onto the shell)
+
