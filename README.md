@@ -166,7 +166,7 @@ Data in JSON
 
 ### v1.1 — Atomic Constraints ✅ Current
 
-**Date:** March 18, 2026
+**Date:** March 12, 2026
 
 **Change:** Added the constraint: `Create ONE table per each [player_id], not per player position.` Refined the input mapping to ensure unique data cards.
 
