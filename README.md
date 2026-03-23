@@ -91,8 +91,7 @@ This prompt generates the individualized physical data cards required for the "D
 **Next step:** P03 (Tactical Pillar) introduction.
 
 ```
-MD+1 Data Export → [P02 runs] → Individual Readiness Card Created → Layered onto P01 Shell
-→ P03 Introduction
+MD+1 Data Export → [P02 runs] → Individual Readiness Card Created → Layered onto P01 Shell → P03 Introduction
 ```
 
 ---
