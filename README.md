@@ -453,7 +453,7 @@ Data in JSON
 
 ## 📊 A/B Test Results
 
-| Criteria | Output A (Typical LLM) | Output B (Structured) |
+| Criteria | v1.0 | v1.1 |
 | :--- | :---: | :---: |
 | Readability | `3.2 / 5` | `4.8 / 5` |
 | Completeness | `2.0 / 5` | `4.9 / 5` |
