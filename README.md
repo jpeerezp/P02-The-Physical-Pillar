@@ -114,7 +114,7 @@ By the time a manual spreadsheet is updated, the morning tactical briefing may h
 
 ## ⚡ Automation Potential
 
-**Level: High**
+**Level: Very High**
 
 | Dimension | Assessment |
 |-----------|------------|
